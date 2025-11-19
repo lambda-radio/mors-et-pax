@@ -1,0 +1,66 @@
+\documentclass[openany]{book}
+
+\usepackage[a6paper,margin=0.67in]{geometry} 
+\usepackage{verbatim}
+
+\usepackage[T1]{fontenc}
+\usepackage{inconsolata}
+\usepackage{microtype}
+
+\usepackage{xcolor}
+\pagecolor{black}
+\color[HTML]{32CD32}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=[HTML]{32CD32},
+	citecolor=[HTML]{32CD32},
+	urlcolor=[HTML]{32CD32}
+}
+
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\bfseries\ttfamily\fontsize{12}{14}\selectfont}
+{}
+{0pt}
+{\begin{center}\Huge}[\end{center}]
+
+\titleformat{\section}{\ttfamily\bfseries\fontsize{8}{10}\selectfont}{\thesection}{1em}{}
+\titleformat{\subsection}{\ttfamily\bfseries\fontsize{7}{9}\selectfont}{\thesubsection}{1em}{}
+
+
+\setlength{\parindent}{1em} 
+\setlength{\parskip}{0pt}  
+
+
+\renewcommand\normalsize{\fontsize{6}{6}\selectfont}
+
+\author{\emph{Cult of the Deceased}}
+\date{\today}
+
+\begin{document}
+	
+	\frontmatter
+	
+	\begin{titlepage}
+		\begin{center}
+			\vfill
+			{\Huge \textbf{MORS ET PAX}}
+			\vfill
+			{\large \emph{Cult of the Deceased}}\\
+			\vfill
+		\end{center}
+	\end{titlepage}
+	
+%	\tableofcontents
+	\newpage
+	
+	Reject existence in the face of subversion imposed by wicked, bestial charlatans.
+	
+	\mainmatter
+	
+	\backmatter
+	
+	
+\end{document}

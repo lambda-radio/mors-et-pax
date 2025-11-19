@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>𝚖𝚘𝚛𝚜 𝚎𝚝 𝚙𝚊𝚡</title>
+  <script>
+    fetch('assets/favicon')
+      .then(r => r.text())
+      .then(b64 => {
+        const l = document.createElement('link');
+        l.rel = 'icon'; l.type = 'image/png';
+        l.href = 'data:image/png;base64,' + b64.trim();
+        document.head.appendChild(l);
+      });
+  </script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:#32cd32; text-decoration:none;">
+      Cult of the Deceased</a>
+    </h1>
+    <!-- <nav>
+      <a href="#">Home</a>
+      <a href="#contact">Contact</a>
+    </nav> -->
+  </header>
+
+  <div class="ticker"><marquee scrollamount="5">
+
+  *** Accessing hidden transmissions... ***
+
+  </marquee></div>
+
+  <pre class="ascii">
+
+    
+   ███▄ ▄███▓ ▒█████   ██▀███    ██████    
+▓██▒▀█▀ ██▒▒██▒  ██▒▓██ ▒ ██▒▒██    ▒    
+▓██    ▓██░▒██░  ██▒▓██ ░▄█ ▒░ ▓██▄      
+▒██    ▒██ ▒██   ██░▒██▀▀█▄    ▒   ██▒   
+▒██▒   ░██▒░ ████▓▒░░██▓ ▒██▒▒██████▒▒   
+░ ▒░   ░  ░░ ▒░▒░▒░ ░ ▒▓ ░▒▓░▒ ▒▓▒ ▒ ░   
+░  ░      ░  ░ ▒ ▒░   ░▒ ░ ▒░░ ░▒  ░ ░   
+░      ░   ░ ░ ░ ▒    ░░   ░ ░  ░  ░     
+       ░       ░ ░     ░           ░     
+                                         
+      ▓█████▄▄▄█████▓                    
+      ▓█   ▀▓  ██▒ ▓▒                    
+      ▒███  ▒ ▓██░ ▒░                    
+      ▒▓█  ▄░ ▓██▓ ░                     
+      ░▒████▒ ▒██▒ ░                     
+      ░░ ▒░ ░ ▒ ░░                       
+       ░ ░  ░   ░                        
+         ░    ░                          
+         ░  ░                            
+                                         
+ ██▓███   ▄▄▄      ▒██   ██▒             
+▓██░  ██▒▒████▄    ▒▒ █ █ ▒░             
+▓██░ ██▓▒▒██  ▀█▄  ░░  █   ░             
+▒██▄█▓▒ ▒░██▄▄▄▄██  ░ █ █ ▒              
+▒██▒ ░  ░ ▓█   ▓██▒▒██▒ ▒██▒             
+▒▓▒░ ░  ░ ▒▒   ▓▒█░▒▒ ░ ░▓ ░             
+░▒ ░       ▒   ▒▒ ░░░   ░▒ ░             
+░░         ░   ▒    ░    ░               
+               ░  ░ ░    ░               
+                                                                                          
+  </pre>
+
+  <section id="main">
+    <div class="btn" onclick="showChoice()">Enter...</div>
+    <br>
+    <a class="btn" href="lambda-radio/">Listen...</a>
+  </section>
+
+  <footer>
+    &copy; <span id="yr"></span> Cult of the Deceased | Hidden Node <a href="files/manuscript/manuscript.pdf" style="text-decoration: none; color: inherit;">Lambda</a>
+  </footer>
+
+  <script>
+    function showChoice() {
+      const main = document.getElementById('main');
+
+      // Hide all other sections except main, header, ticker, footer
+      document.querySelectorAll('section').forEach(section => {
+        if (section.id !== 'main') section.style.display = 'none';
+      });
+
+      // Replace main content with Yes/No buttons
+      main.innerHTML = `
+        <h2>Are you alive?</h2>
+        <div class="btn" onclick="answer('yes')">Yes</div>
+        <div class="btn" onclick="answer('no')">No</div>
+      `;
+    }
+
+    function answer(choice) {
+      const main = document.getElementById('main');
+
+      if (choice === 'yes') {
+        main.innerHTML = `
+          <h2>You claim to be alive</h2>
+          <p>We do not welcome the animated</p>
+        `;
+      } else if (choice === 'no') {
+        main.innerHTML = `
+          <h2>Liar</h2>
+          <p>The deceased do not communicate digitally</p>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

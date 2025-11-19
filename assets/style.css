@@ -1,0 +1,61 @@
+body{
+  background-color: black;
+  color: #32cd32;
+  font-family: 'Special Elite', Courier, monospace;
+  text-align: center;
+  padding: 20px;
+  cursor: url('https://cur.cursors-4u.net/mechanics/mec-2/mec111.cur'), auto;
+}
+
+*,
+*::before,
+*::after {
+  cursor: url('https://cur.cursors-4u.net/mechanics/mec-2/mec111.cur'), auto !important;
+}
+header, footer, section, .ascii{
+  width:90%;
+  max-width:800px;
+  margin:20px auto;
+}
+header{text-align:center;}
+header h1{margin:0;}
+nav a{
+  color:#0f0;
+  margin:0 8px;
+  text-decoration:none;
+}
+nav a:hover{text-decoration:underline;}
+.ticker{
+  border-top:1px solid #0f0;
+  border-bottom:1px solid #0f0;
+  padding:4px;
+  font-size:14px;
+}
+pre.ascii{
+  font-size:12px;
+  line-height:1.2;
+  color:#0f0;
+  text-align:center;
+  overflow-x: hidden;
+}
+@media (max-width: 600px) {
+  pre.ascii {
+    font-size: 5px;
+  }
+}
+.btn{
+  display:inline-block;
+  margin:8px;
+  padding:4px 10px;
+  border:1px solid #0f0;
+  cursor:pointer;
+}
+.btn:hover{background:#0f0;color:#000;}
+h2{border-bottom:1px dashed #0f0;}
+ul{padding-left:16px;}
+footer{
+  text-align:center;
+  font-size:12px;
+  border-top:1px solid #0f0;
+  padding-top:8px;
+} 
